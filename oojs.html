@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>
+      This example requires you to enter commands in your browser's JavaScript
+      console (see
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
+        >What are browser developer tools</a
+      >
+      for more information).
+    </p>
+  </body>
+
+  <script>
+    const person = {
+      // name: ["Bob", "Mane"],
+      name: {
+        first: "Bob",
+        last: "Mane",
+      },
+      age: 32,
+      bio: function () {
+        // console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old`);
+        console.log(
+          `${this.name.first} ${this.name.last} is ${this.age} years old`
+        );
+      },
+      introduceSelf: function () {
+        // console.log(`My name is ${this.name[0]}`);
+        console.log(`My name is ${this.name.first}`);
+      },
+    };
+
+    // const input = prompt("Get name or age?");
+    // console.log(`This is the ${person[input]}`);
+
+    const myNameData = "height";
+    const myValueData = "1.75m";
+    person[myNameData] = myValueData;
+  </script>
+</html>
